@@ -1,28 +1,107 @@
 {
   "manifestVersion": 1,
   "name": "Arabic & Extra Sources",
-  "description": "Additional multi-server movie and TV sources.",
-  "website": "https://screenscape.me",
+  "description": "Arabic and multilingual movie and TV sources for OpenStream.",
+  "website": "https://github.com/beltouabdelwahab2026-droid/openstream-arabic",
   "extensions": [
     {
-      "id": "screenscape",
-      "name": "ScreenScape",
-      "description": "Multi-server movie and TV source with multilingual audio and subtitles.",
+      "id": "urplayer",
+      "name": "URPlayer 🇦🇪",
+      "description": "Arabic-oriented movie and TV player with TMDB support.",
+      "version": "1.0.0",
+      "versionCode": 1,
+      "apiVersion": 1,
+      "authors": ["Community"],
+      "language": "Arabic",
+      "tags": ["movies", "series", "arabic", "1080p", "download"],
+      "status": 3,
+      "installedByDefault": false,
+      "fallback": true,
+      "engine": {
+        "type": "web-embed",
+        "movieUrl": "https://urplayer.net/embed/movie/{tmdbId}",
+        "tvUrl": "https://urplayer.net/embed/tv/{tmdbId}/{season}/{episode}",
+        "priority": 40
+      }
+    },
+    {
+      "id": "vidsrc-ar",
+      "name": "VidSrc 🇦🇪",
+      "description": "TMDB movie and TV player with Arabic subtitle selection.",
       "version": "1.0.0",
       "versionCode": 1,
       "apiVersion": 1,
       "authors": ["Community"],
       "language": "Multi",
-      "tags": ["movies", "series", "multi-server", "subtitles"],
+      "tags": ["movies", "series", "arabic", "subtitles"],
       "status": 3,
-      "updatedAt": "2026-10-02",
       "installedByDefault": false,
       "fallback": true,
       "engine": {
         "type": "web-embed",
-        "movieUrl": "https://nxsha.screenscape.me/embed?tmdb={tmdbId}&type=movie",
-        "tvUrl": "https://nxsha.screenscape.me/embed?tmdb={tmdbId}&type=tv&s={season}&e={episode}",
+        "movieUrl": "https://vidsrc.sbs/embed/movie/{tmdbId}?sub=ar",
+        "tvUrl": "https://vidsrc.sbs/embed/tv/{tmdbId}/{season}/{episode}?sub=ar",
+        "priority": 35
+      }
+    },
+    {
+      "id": "stellar-ar",
+      "name": "Stellar Arabic 🇦🇪",
+      "description": "Stellar player using its Arabic interface.",
+      "version": "1.0.0",
+      "versionCode": 1,
+      "apiVersion": 1,
+      "authors": ["Community"],
+      "language": "Arabic",
+      "tags": ["movies", "series", "arabic", "4k"],
+      "status": 3,
+      "installedByDefault": false,
+      "fallback": true,
+      "engine": {
+        "type": "web-embed",
+        "movieUrl": "https://stellar.rip/ar/watch/embed/movie/{tmdbId}",
+        "tvUrl": "https://stellar.rip/ar/watch/embed/tv/{tmdbId}-{season}-{episode}",
         "priority": 30
+      }
+    },
+    {
+      "id": "cinesrc",
+      "name": "CineSrc",
+      "description": "Multi-server movie and TV player with quality selection.",
+      "version": "1.0.0",
+      "versionCode": 1,
+      "apiVersion": 1,
+      "authors": ["Community"],
+      "language": "Multi",
+      "tags": ["movies", "series", "multi-server", "1080p"],
+      "status": 3,
+      "installedByDefault": false,
+      "fallback": true,
+      "engine": {
+        "type": "web-embed",
+        "movieUrl": "https://cinesrc.st/embed/movie/{tmdbId}",
+        "tvUrl": "https://cinesrc.st/embed/tv/{tmdbId}?s={season}&e={episode}",
+        "priority": 25
+      }
+    },
+    {
+      "id": "streamsrc",
+      "name": "Streamsrc",
+      "description": "TMDB movie and TV player with automatically refreshed sources.",
+      "version": "1.0.0",
+      "versionCode": 1,
+      "apiVersion": 1,
+      "authors": ["Community"],
+      "language": "Multi",
+      "tags": ["movies", "series", "multi-server", "hd"],
+      "status": 3,
+      "installedByDefault": false,
+      "fallback": true,
+      "engine": {
+        "type": "web-embed",
+        "movieUrl": "https://streamsrc.cc/watch/movie/tmdbid={tmdbId}",
+        "tvUrl": "https://streamsrc.cc/watch/series/tmdbid={tmdbId}",
+        "priority": 20
       }
     }
   ]
